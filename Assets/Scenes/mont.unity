@@ -121,6 +121,89 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &240928219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 240928220}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &240928220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240928219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 325856453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &325856453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2325339279636294217, guid: cf9a034ddc29e324b97397fe6c587af5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545397103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &424124112
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424124114}
+  - component: {fileID: 424124113}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &424124113
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424124112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 0}
+  m_StaticLightingSkyUniqueID: 0
+  m_SkySettings: {fileID: 0}
+  m_SkySettingsFromProfile: {fileID: 0}
+--- !u!4 &424124114
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424124112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &588254892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2325339278877764898, guid: cf9a034ddc29e324b97397fe6c587af5,
@@ -569,6 +652,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5699bceb1c45b2d4db7ba12d9d0483f7, type: 2}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_WheelDampingRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686192, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_SuspensionSpring.targetPosition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325339280608686193, guid: cf9a034ddc29e324b97397fe6c587af5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.536
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf9a034ddc29e324b97397fe6c587af5, type: 3}
 --- !u!1 &1707933177

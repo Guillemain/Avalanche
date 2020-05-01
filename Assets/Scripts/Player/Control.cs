@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
+    [Header("Input")]
+    [SerializeField] bool souris = false;
+    [SerializeField] float sensibility= 0.5f;
 
     [Header("Controle")]
     [SerializeField] float puissanceAcceleration=1f;
@@ -22,7 +25,8 @@ public class Control : MonoBehaviour
     [SerializeField] WheelCollider Roue;
     //[SerializeField] Transform t;
     
-
+    float inputX=0.0f;
+    float inputY=0.0f;
     Vector3 initPosition;
     Quaternion initRot;
     Rigidbody rb;
@@ -50,6 +54,11 @@ public class Control : MonoBehaviour
 
     private void FixedUpdate() {
 
+        if(souris){
+            inputX = Mathf.Lerp(inputX,Input.GetAxis("Horizontal"),sensibility);
+            inputY = Mathf.Lerp(inputY, Input.GetAxis("Vertical"),sensibility);
+        }
+
         // Gestion de l'acceleration 
         if(Input.GetButton("Fire1")){ 
             rb.AddForce( transform.forward*puissanceAcceleration,ForceMode.Acceleration);
@@ -60,9 +69,9 @@ public class Control : MonoBehaviour
 
         if(Roue.isGrounded){
             // Gestion de la rotation avec la souris et controller xBOX
-            transform.Rotate( ((- transform.forward ) * torque * Input.GetAxis("Horizontal")+ (transform.right) * torque/2 * Input.GetAxis("Vertical"))*Time.fixedDeltaTime,Space.World);
-
-            if(rb.velocity.magnitude - rb.velocity.z > 20f)
+            transform.Rotate( ((- transform.forward ) * torque * inputX+ (transform.right) * torque/2 * inputY)*Time.fixedDeltaTime,Space.World);
+            print(Roue.contactOffset);
+            if(rb.velocity.magnitude - rb.velocity.z > 5f)
                 particuleVitesse.emissionRate=400f;
             
             // Proto Drift (on tourne juste fraction fois plus vite.)
@@ -79,7 +88,7 @@ public class Control : MonoBehaviour
             particuleVitesse.emissionRate=0f;
             // Gestion de la rotation avec la souris et controller xBOX
             transform.Rotate(Vector3.up * Vector3.Dot(-transform.right,Vector3.up)*Time.fixedDeltaTime * torqueTournant * airFractionLacet,Space.World);
-            transform.Rotate( (( - transform.forward ) *torque * Input.GetAxis("Horizontal") + (transform.right) * torque * Input.GetAxis("Vertical"))*Time.fixedDeltaTime ,Space.World);
+            transform.Rotate( (( - transform.forward ) *torque * inputX + (transform.right) * torque * inputY)*Time.fixedDeltaTime ,Space.World);
         }
 
         

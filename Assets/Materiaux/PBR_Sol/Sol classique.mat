@@ -22,8 +22,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Sol classique
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
-    _PIXEL_DISPLACEMENT _PIXEL_DISPLACEMENT_LOCK_OBJECT_SCALE
+  m_ShaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP _NORMALMAP
+    _NORMALMAP_TANGENT_SPACE _PIXEL_DISPLACEMENT _PIXEL_DISPLACEMENT_LOCK_OBJECT_SCALE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,7 +44,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
         m_Texture: {fileID: 2800000, guid: b1928557d7a6b9148b8b5beed37ab430, type: 3}
-        m_Scale: {x: 100, y: 25}
+        m_Scale: {x: 25, y: 10}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -107,7 +107,7 @@ Material:
         m_Scale: {x: 40, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ac2f381b91ab7ee4abe18a2463bdd6af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -217,17 +217,17 @@ Material:
     - _GlossMapScale: 0.172
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeightAmplitude: 0.005
+    - _HeightAmplitude: 0.0188
     - _HeightCenter: 1
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1
     - _HeightOffset: 0
-    - _HeightPoMAmplitude: 0.5
+    - _HeightPoMAmplitude: 1.88
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
     - _IncludeIndirectLighting: 1
-    - _InvTilingScale: 0.016
+    - _InvTilingScale: 0.057142857
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1

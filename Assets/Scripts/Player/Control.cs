@@ -70,7 +70,6 @@ public class Control : MonoBehaviour
         if(Roue.isGrounded){
             // Gestion de la rotation avec la souris et controller xBOX
             transform.Rotate( ((- transform.forward ) * torque * inputX+ (transform.right) * torque/2 * inputY)*Time.fixedDeltaTime,Space.World);
-            print(Roue.contactOffset);
             if(rb.velocity.magnitude - rb.velocity.z > 5f)
                 particuleVitesse.emissionRate=400f;
             

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SolDistance : MonoBehaviour
 {
+    public float distance = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,10 @@ public class SolDistance : MonoBehaviour
         Ray ray = new Ray(transform.position,-transform.up);
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo,20f)){
-            print(hitInfo.distance);
-            Debug.DrawLine(transform.position,transform.position - transform.up*hitInfo.distance,Color.blue);
+            distance = hitInfo.distance;
+            //Debug.DrawLine(transform.position,transform.position - transform.up*hitInfo.distance,Color.blue);
+        }else{
+            distance = 10000f;
         }
     
 

@@ -120,8 +120,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_114E6053: 0.88
-    - Vector1_1AE2E5B5: 2.07
+    - Vector1_114E6053: 3.19
+    - Vector1_1AE2E5B5: 0.1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -232,17 +232,17 @@ Material:
     - _TransparentDepthPrepassEnable: 0
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
-    - _TransparentZWrite: 0
+    - _TransparentZWrite: 1
     - _UVBase: 0
     - _UVDetail: 0
     - _UVEmissive: 0
     - _UseEmissiveIntensity: 0
     - _UseShadowThreshold: 0
-    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestDepthEqualForOpaque: 2
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
-    - _ZTestTransparent: 4
-    - _ZWrite: 0
+    - _ZTestTransparent: 2
+    - _ZWrite: 1
     m_Colors:
     - EmissionCOlor: {r: 0, g: 0.9179597, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
